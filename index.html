@@ -1,7 +1,8 @@
 <!DOCTPYE html>
 <html>
     <head>
-        <title>Memorabilia</title>
+        <title>Scans</title>
+        <link rel="stylesheet" type="text/css" href="mouseunmute.css">
         <style>
             body {
                 margin: 0px;
@@ -12,24 +13,38 @@
             }
         </style>
     </head>
+
     <body>
-        <video autoplay loop >
-            <source src="/content/Scan_1.mp4" type="video/mp4">
+        <video id="myVideo" onmouseover="unMute(this)" onmouseout="mute(this)" src="content/Scan_1.mp4" controls autoplay loop muted>
+           <!-- <source src="content/Scan_1.mp4" type="video/mp4"> -->
         </video>
-        <video autoplay loop >
+        <video controls autoplay loop muted>
             <source src="content/Scan_2.mp4" type="video/mp4">
         </video>
-        <video autoplay loop >
+        <video controls autoplay loop muted>
             <source src="content/Scan_3.mp4" type="video/mp4">
         </video>
-        <video autoplay loop >
+        <video controls autoplay loop muted>
             <source src="content/Scan_4.mp4" type="video/mp4">
         </video>
-        <video autoplay loop >
+        <video controls autoplay loop muted>
             <source src="content/Scan_5.mp4" type="video/mp4">
         </video>
-        <video autoplay loop >
+        <video controls autoplay loop muted>
             <source src="content/Scan_6.mp4" type="video/mp4">
         </video>
+
+        <script>
+            var vid = document.getElementById("myVideo");
+
+            function unMute(x) {
+                vid.volume = 1;
+            }
+
+            function mute(x) {
+                vid.volume = 0;
+            }
+        </script>
+
     </body>
 </html>
