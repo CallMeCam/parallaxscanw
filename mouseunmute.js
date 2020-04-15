@@ -8,13 +8,13 @@ backAudio[0].volume = 0;
      if (muted) {
          video.attr("disabled", "");
          backAudio.animate({volume: 1}, 1000, function () {
-             muted = true;
+             muted = false;
          });
      }
      else {
          video.attr("disabled", "");
          backAudio.animate({volume: 0}, 1000, function () {
-             muted = false;
+             muted = true;
          });
      }
  });
