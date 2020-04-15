@@ -15,25 +15,26 @@
 
     <body>
         <div class='grid'>
-            <video id="video" src="content/Scan_1.mp4" muted preload></video>
-            <video id="video" src="content/Scan_2.mp4" muted preload></video>
-            <video id="video" src="content/Scan_3.mp4" muted preload></video>
-            <video id="video" src="content/Scan_4.mp4" muted preload></video>
-            <video id="video" src="content/Scan_5.mp4" muted preload></video>
-            <video id="video" src="content/Scan_6.mp4" muted preload></video>
+            <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_1.mp4"></video>
+            <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_2.mp4"></video>
+            <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_3.mp4"></video>
+            <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_4.mp4"></video>
+            <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_5.mp4"></video>
+            <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_6.mp4"></video>
 
-            <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+            <script type="text/javascript"></script>
 
             <script>
-                window.onload=function(){
 
-                var viewport = document.getElementsByClassName('grid')[0]
-                var video = document.getElementById('video')
-
-                viewport.addEventListener('mouseover', function() { video.play() }, false);
-                viewport.addEventListener('mouseout', function() { video.pause() }, false);
-
+                function disableMute(vid){
+                    if (vid.muted == true){
+                         vid.muted = false;
+                    }
+                    else {
+                        vid.muted = true;
+                    }
                 }
+
             </script>
         </div>
     </body>
