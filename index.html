@@ -2,7 +2,14 @@
 <html>
     <head>
         <title>Scans</title>
-        <link rel="stylesheet" type="text/css" href="mouseunmute.css">
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.0.2.js"></script>
+        <style id="compiled-css" type="text/css">
+            #mediaplayer {
+             }
+      
+            .mute {
+            }
+        </style>
         <style>
             body {
                 margin: 0px;
@@ -15,41 +22,37 @@
     </head>
 
     <body>
-        <video id="mediaplayer" class="mute" src="content/Scan_1.mp4" autoplay volume="0" controls></video>
-        <video id="mediaplayer" src="content/Scan_2.mp4" controls autoplay loop muted></video>
-        <video id="mediaplayer" src="content/Scan_3.mp4" controls autoplay loop muted></video>
-        <video id="mediaplayer" src="content/Scan_4.mp4" controls autoplay loop muted></video>
-        <video id="mediaplayer" src="content/Scan_5.mp4" controls autoplay loop muted></video>
-        <video id="mediaplayer" src="content/Scan_6.mp4" controls autoplay loop muted></video>
-    <!--
-        <video id="mediaplayer" controls autoplay loop muted>
-            <source src="content/Scan_2.mp4" type="video/mp4">
-        </video>
-        <video controls autoplay loop muted>
-            <source src="content/Scan_3.mp4" type="video/mp4">
-        </video>
-        <video controls autoplay loop muted>
-            <source src="content/Scan_4.mp4" type="video/mp4">
-        </video>
-        <video controls autoplay loop muted>
-            <source src="content/Scan_5.mp4" type="video/mp4">
-        </video>
-        <video controls autoplay loop muted>
-            <source src="content/Scan_6.mp4" type="video/mp4">
-        </video>
+        <video id="mediaplayer" class="mute" src="content/Scan_1.mp4" autoplay="autoplay" volume="0" controls muted></video>
+        <video id="mediaplayer2" src="content/Scan_2.mp4" controls autoplay loop muted></video>
+        <video id="mediaplayer3" src="content/Scan_3.mp4" controls autoplay loop muted></video>
+        <video id="mediaplayer4" src="content/Scan_4.mp4" controls autoplay loop muted></video>
+        <video id="mediaplayer5" src="content/Scan_5.mp4" controls autoplay loop muted></video>
+        <video id="mediaplayer6" src="content/Scan_6.mp4" controls autoplay loop muted></video>
 
         <script>
-            var vid = document.getElementById("myVideo");
-
-            function unMute(x) {
-                vid.volume = 1;
-            }
-
-            function mute(x) {
-                vid.volume = 0;
-            }
+            $(document).ready(function(){
+                var backAudio = $('#mediaplayer');
+                var vid = document.getElementById("mediaplayer");
+                var muted = true;
+                backAudio[0].volume = 0;
+                  
+                $('.mute').mouseover(function(){
+                    var video = $(this);
+                    if (muted) {
+                        video.attr("disabled", "");
+                        backAudio.animate({volume: 1}, 1000, function () {
+                            muted = false;
+                        });
+                    }
+                    else {
+                        video.attr("disabled", "");
+                        backAudio.animate({volume: 0}, 1000, function () {
+                            muted = true;
+                        });
+                    }
+                });
+                });
+                
         </script>
-    -->
-
     </body>
 </html>
