@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+
+body {
+    margin: 0px;
+}
+
+video {
+    width: 50%;
+    float: left;
+}
+
+.grid {
+    position: relative;
+    text-align: left;
+    color: white;
+ }
+
+.grid:hover #blurb{
+    opacity:0;
+}
+
+.top-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 800px;
+}
+
+h1 {
+    position: absolute;
+    font-family: 'Cabin', sans-serif;
+    top: -100px;
+    padding: 20px;
+    font-size: 15vw;
+    color: rgb(255, 115, 0);
+    opacity: 1;
+    transition: 1s;
+    word-wrap: break-word;
+    
+ }
+
+ #blurb {
+    padding: 20px;
+    width: 92vw;
+    height: auto;
+    opacity: 1;
+    transition: 1s;
+ }
+
+
+
+

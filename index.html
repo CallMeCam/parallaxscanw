@@ -3,18 +3,17 @@
     <head>
         <title>Scans</title>
         <style>
-            body {
-                margin: 0px;
-            }
-            video {
-                width: 50%;
-                float: left;
-            }
+
         </style>
+        <link rel="stylesheet" type="text/css" href="textblock.css">
     </head>
 
     <body>
-        <div class='grid'>
+        <div class="grid">
+            <div class="top-left">
+                <img src="content/parallax_blurb.png" id="blurb"></img>
+            </div>
+
             <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_1.mp4"></video>
             <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_2.mp4"></video>
             <video autoplay loop preload muted onclick="disableMute(this)" src="content/Scan_3.mp4"></video>
@@ -24,7 +23,6 @@
 
             <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             
-
             <script>
 
                 function disableMute(vid){
