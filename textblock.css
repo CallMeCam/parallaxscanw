@@ -42,8 +42,8 @@ h1 {
 
  #blurb {
     padding: 20px;
-    width: 92vw;
-    height: auto;
+    width: auto;
+    height: 92vw;
     opacity: 1;
     transition: 1s;
  }
